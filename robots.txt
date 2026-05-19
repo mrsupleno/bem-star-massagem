@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bemstarmassagem.com.br/sitemap.xml
