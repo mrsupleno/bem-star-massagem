@@ -12,13 +12,13 @@
   <meta property="og:title" content="Bem Star Massagem | Viviane Lobato">
   <meta property="og:description" content="Alívio, relaxamento e cuidado corporal em Vila Velha. Massagem relaxante, terapêutica, estética e tântrica com hora marcada.">
   <meta property="og:url" content="https://bemstarmassagem.com.br/">
-  <meta property="og:image" content="https://bemstarmassagem.com.br/assets/viviane-lobato.webp?v=3">
+  <meta property="og:image" content="https://bemstarmassagem.com.br/assets/viviane-lobato.webp">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#6d4f79">
-  <link rel="icon" href="assets/logo-bem-star.png">
+  <meta name="theme-color" content="#5c3d6b">
+  <link rel="icon" href="assets/logo-roxa-transparente.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {
@@ -27,10 +27,10 @@
     "name": "Bem Star Massagem",
     "description": "Massagem relaxante, terapêutica, estética e tântrica em Vila Velha, conduzida por Viviane Lobato.",
     "url": "https://bemstarmassagem.com.br/",
-    "image": "https://bemstarmassagem.com.br/assets/viviane-lobato.webp?v=3",
+    "image": "https://bemstarmassagem.com.br/assets/viviane-lobato.webp",
     "telephone": "+5527992419696",
     "priceRange": "$$",
-    "founder": {"@type": "Person", "name": "Viviane Lobato"},
+    "founder": { "@type": "Person", "name": "Viviane Lobato" },
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Rua Antônio Ataíde, 1402, Edifício Ludovinia, sala 107",
@@ -48,132 +48,494 @@
   </script>
 </head>
 <body>
+
   <header class="topbar" id="inicio">
     <a class="brand" href="#inicio" aria-label="Bem Star Massagem">
-      <img src="assets/logo-bem-star.webp" alt="Logo Bem Star Massagem Roxa" width="56" height="56">
-      <span>Bem Star<br><strong>Massagem</strong></span>
+      <img src="assets/logo-roxa-transparente.png" alt="Logo Bem Star Massagem" width="52" height="52">
+      <span>Bem Star<strong>Massagem</strong></span>
     </a>
-    <nav aria-label="Menu principal">
-      <a href="#viviane">Viviane</a>
-      <a href="#massagens">Massagens</a>
-      <a href="#tantrica">Tântrica</a>
-      <a href="#localizacao">Localização</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav" aria-label="Menu principal">
+      <a href="#sobre" class="nav-link">Sobre</a>
+      <a href="#massagens" class="nav-link">Massagens</a>
+      <a href="#relaxante" class="nav-link">Relaxante</a>
+      <a href="#tantrica" class="nav-link">Tântrica</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <a href="#contato" class="nav-link">Contato</a>
     </nav>
-    <a class="nav-cta" href="https://wa.me/5527992419696?text=Ol%C3%A1%2C%20Viviane.%20Vim%20pelo%20site%20da%20Bem%20Star%20Massagem%20e%20quero%20agendar%20uma%20sess%C3%A3o." target="_blank" rel="noopener">Agendar</a>
+
+    <a class="nav-cta"
+       href="https://wa.me/5527992419696?text=Ol%C3%A1%2C%20Viviane.%20Vim%20pelo%20site%20da%20Bem%20Star%20Massagem%20e%20quero%20agendar%20uma%20sess%C3%A3o."
+       target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.524 5.849L0 24l6.336-1.501A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.82 9.82 0 01-5.003-1.368l-.36-.213-3.76.891.938-3.657-.234-.376A9.82 9.82 0 012.182 12C2.182 6.574 6.574 2.182 12 2.182S21.818 6.574 21.818 12 17.426 21.818 12 21.818z"/></svg>
+      Agendar
+    </a>
   </header>
 
   <main>
+
     <section class="hero section-pad">
       <div class="hero-copy">
-        <p class="eyebrow">Massagem em Vila Velha • Centro</p>
-        <h1>Seu corpo avisa quando está na hora de parar.</h1>
+        <p class="eyebrow">Massagem em Vila Velha &bull; Centro</p>
+        <h1>Seu corpo merece mais do que uma pausa.</h1>
         <p class="lead">Na Bem Star Massagem, Viviane Lobato oferece atendimentos de massagem relaxante, terapêutica, estética e tântrica em um espaço acolhedor no Centro de Vila Velha.</p>
         <div class="hero-actions">
-          <a class="btn primary" href="https://wa.me/5527992419696?text=Ol%C3%A1%2C%20Viviane.%20Quero%20agendar%20uma%20sess%C3%A3o%20na%20Bem%20Star%20Massagem." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+          <a class="btn primary"
+             href="https://wa.me/5527992419696?text=Ol%C3%A1%2C%20Viviane.%20Quero%20agendar%20uma%20sess%C3%A3o%20na%20Bem%20Star%20Massagem."
+             target="_blank" rel="noopener">
+            Agendar pelo WhatsApp
+          </a>
           <a class="btn secondary" href="#massagens">Conhecer massagens</a>
         </div>
         <div class="trust-row" aria-label="Dados da Bem Star Massagem">
           <span>+6 mil atendimentos</span>
-          <span>+7 anos</span>
+          <span>+7 anos de experiência</span>
           <span>+8 mil seguidores</span>
         </div>
       </div>
-      <div class="hero-card" aria-label="Viviane Lobato">
-        <div class="profile-wrap">
-          <img class="profile" src="assets/viviane-lobato.webp?v=3" alt="Viviane Lobato, massoterapeuta da Bem Star Massagem" width="720" height="720">
-          <img class="seal" src="assets/logo-bem-star.webp" alt="Bem Star Massagem" width="180" height="180">
+
+      <div class="hero-visual">
+        <div class="profile-frame">
+          <img class="profile-photo"
+               src="assets/viviane-lobato.webp"
+               alt="Viviane Lobato, massoterapeuta da Bem Star Massagem"
+               width="680" height="680"
+               loading="eager">
+          <div class="profile-badge">
+            <img src="assets/logo-roxa-transparente.png" alt="Bem Star Massagem" width="72" height="72">
+          </div>
         </div>
-        <div class="card-note">
-          <strong>Atendimento com hora marcada</strong>
-          <span>Rua Antônio Ataíde, 1402 • Sala 107 • Centro de Vila Velha</span>
+        <div class="hero-card-note">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <strong>Atendimento com hora marcada</strong>
+            <span>Rua Antônio Ataíde, 1402 &bull; Sala 107 &bull; Centro, Vila Velha</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="problem section-pad">
-      <div>
-        <p class="eyebrow">Pausa, recuperação e presença</p>
-        <h2>Seu corpo não foi feito para viver no modo tensão o tempo todo.</h2>
+    <section class="about section-pad" id="sobre">
+      <div class="about-visual">
+        <div class="about-img-wrap">
+          <img src="assets/viviane-lobato.webp"
+               alt="Viviane Lobato massoterapeuta"
+               width="600" height="700"
+               loading="lazy">
+        </div>
+        <div class="about-tag">
+          <span class="tag-number">+7</span>
+          <span>anos de experiência</span>
+        </div>
       </div>
-      <p>Dor nas costas, peso nas pernas, rigidez no pescoço, estresse acumulado e dificuldade para relaxar são sinais de que o corpo está pedindo cuidado. Massagem não é luxo. É manutenção do corpo.</p>
-    </section>
 
-    <section class="about section-pad" id="viviane">
-      <div class="about-image">
-        <img src="assets/viviane-lobato.webp?v=3" alt="Viviane Lobato" width="720" height="720">
-      </div>
       <div class="about-copy">
         <p class="eyebrow">Quem cuida de você</p>
         <h2>Viviane Lobato</h2>
         <p>Viviane Lobato é terapeuta complementar e massoterapeuta à frente da Bem Star Massagem, em Vila Velha. Seu trabalho une técnicas manuais, cuidado estético e atenção ao bem-estar de cada pessoa.</p>
-        <p>O atendimento é pensado para relaxamento, alívio de tensões, consciência corporal e melhora da sensação de leveza — sempre com escuta, respeito e cuidado profissional.</p>
-        <a class="text-link" href="https://www.instagram.com/bemstar.massagem/" target="_blank" rel="noopener">Ver Instagram @bemstar.massagem</a>
+        <p>O atendimento é pensado para relaxamento, alívio de tensões, consciência corporal e melhora da sensação de leveza — sempre com escuta, respeito e cuidado profissional em cada sessão.</p>
+        <div class="about-certs">
+          <div class="cert-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Massoterapeuta certificada
+          </div>
+          <div class="cert-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Terapeuta complementar
+          </div>
+          <div class="cert-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Atendimento personalizado
+          </div>
+        </div>
+        <a class="btn outline" href="https://www.instagram.com/bemstar.massagem/" target="_blank" rel="noopener">
+          Ver no Instagram @bemstar.massagem
+        </a>
       </div>
     </section>
 
     <section class="services section-pad" id="massagens">
-      <div class="section-head">
-        <p class="eyebrow">Massagens e cuidados</p>
-        <h2>Escolha o atendimento para o seu momento.</h2>
-        <p>Cada sessão é conduzida de acordo com a necessidade do corpo naquele dia.</p>
+      <div class="section-intro">
+        <div>
+          <p class="eyebrow">Modalidades de atendimento</p>
+          <h2>Escolha o cuidado certo para o seu momento.</h2>
+        </div>
+        <p class="section-desc">Cada sessão é conduzida de acordo com a necessidade do corpo naquele dia, com técnicas adaptadas para você.</p>
       </div>
+
       <div class="service-grid">
-        <article><span>01</span><h3>Massagem Relaxante</h3><p>Para desacelerar, aliviar o estresse e soltar tensões acumuladas.</p></article>
-        <article><span>02</span><h3>Massagem Terapêutica</h3><p>Cuidado mais direcionado para tensões musculares e desconfortos corporais.</p></article>
-        <article><span>03</span><h3>Drenagem e Estética</h3><p>Atendimentos corporais voltados à sensação de leveza, modelagem e cuidado estético.</p></article>
-        <article><span>04</span><h3>Reflexologia Podal</h3><p>Cuidado focado nos pés para relaxamento profundo e sensação de equilíbrio corporal.</p></article>
-        <article><span>05</span><h3>Ventosaterapia</h3><p>Técnica complementar que pode auxiliar na sensação de relaxamento e soltura muscular.</p></article>
-        <article><span>06</span><h3>Pedras Quentes</h3><p>Experiência de relaxamento com calor, toque e profundidade.</p></article>
-        <article><span>07</span><h3>Quick Massage</h3><p>Atendimento rápido para empresas, eventos e pausas de bem-estar.</p></article>
-        <article><span>08</span><h3>Eventos e Casamentos</h3><p>Uma experiência diferenciada para noivas, casais, convidados e ações corporativas.</p></article>
+        <article class="service-card">
+          <div class="service-icon">🌿</div>
+          <h3>Massagem Relaxante</h3>
+          <p>Para desacelerar, aliviar o estresse e soltar as tensões acumuladas no dia a dia.</p>
+          <a href="#relaxante" class="card-link">Saiba mais →</a>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">💆</div>
+          <h3>Massagem Terapêutica</h3>
+          <p>Cuidado direcionado para tensões musculares, desconfortos corporais e pontos de dor.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">✨</div>
+          <h3>Drenagem e Estética</h3>
+          <p>Atendimentos corporais para sensação de leveza, modelagem e cuidado estético.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">🦶</div>
+          <h3>Reflexologia Podal</h3>
+          <p>Cuidado focado nos pés para relaxamento profundo e sensação de equilíbrio corporal.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">🌬️</div>
+          <h3>Ventosaterapia</h3>
+          <p>Técnica complementar que auxilia no relaxamento, soltura muscular e bem-estar geral.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">🔥</div>
+          <h3>Pedras Quentes</h3>
+          <p>Experiência de relaxamento profundo com calor, toque e presença.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">⚡</div>
+          <h3>Quick Massage</h3>
+          <p>Atendimento rápido para empresas, eventos corporativos e pausas de bem-estar.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">💍</div>
+          <h3>Eventos e Casamentos</h3>
+          <p>Uma experiência diferenciada para noivas, casais, convidados e ações especiais.</p>
+        </article>
+        <article class="service-card highlight-card">
+          <div class="service-icon">🌸</div>
+          <h3>Massagem Tântrica</h3>
+          <p>Uma prática de presença, respiração e reconexão com o corpo, conduzida com ética e respeito.</p>
+          <a href="#tantrica" class="card-link">Saiba mais →</a>
+        </article>
       </div>
     </section>
 
-    <section class="tantric section-pad" id="tantrica">
-      <div class="tantric-box">
-        <p class="eyebrow">Com respeito e limites claros</p>
-        <h2>Massagem Tântrica em Vila Velha</h2>
-        <p>A massagem tântrica é uma prática corporal voltada à presença, respiração, sensibilidade, relaxamento profundo e reconexão com o próprio corpo.</p>
-        <p>Na Bem Star Massagem, o atendimento é conduzido com acolhimento, ética, escuta e limites profissionais bem definidos. É uma experiência de cuidado corporal, não uma promessa milagrosa e não uma comunicação vulgarizada.</p>
-        <a class="btn primary" href="https://wa.me/5527992419696?text=Ol%C3%A1%2C%20Viviane.%20Quero%20saber%20mais%20sobre%20a%20massagem%20t%C3%A2ntrica%20na%20Bem%20Star." target="_blank" rel="noopener">Conversar sobre massagem tântrica</a>
-      </div>
-    </section>
+    <section class="relaxante section-pad" id="relaxante">
+      <div class="relaxante-inner">
+        <div class="relaxante-copy">
+          <p class="eyebrow">Para quem precisa descansar de verdade</p>
+          <h2>Massagem Relaxante em Vila Velha</h2>
+          <p class="relaxante-lead">A massagem relaxante é o cuidado mais completo para quem vive sobrecarregado. Uma hora dedicada ao silêncio, ao alívio e à presença.</p>
 
-    <section class="proof section-pad">
-      <div>
-        <p class="eyebrow">Experiência Bem Star</p>
-        <h2>Quem passa pela Bem Star sente a diferença.</h2>
-      </div>
-      <div class="proof-list">
-        <p>Atendimento atencioso, ambiente agradável, profissionalismo e cuidado durante toda a sessão.</p>
-        <p>Um espaço climatizado, tranquilo e preparado para quem aprecia um bom atendimento.</p>
-        <p>Mais de 7 anos de atuação e milhares de atendimentos realizados.</p>
-      </div>
-    </section>
+          <div class="relaxante-benefits">
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              </div>
+              <div>
+                <strong>Alívio do estresse</strong>
+                <span>Redução de cortisol e tensão muscular acumulada</span>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <strong>Qualidade do sono</strong>
+                <span>Melhora significativa no descanso noturno</span>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+              </div>
+              <div>
+                <strong>Leveza corporal</strong>
+                <span>Sensação de corpo mais leve e mente mais tranquila</span>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <strong>Bem-estar emocional</strong>
+                <span>Aumento de serotonina e sensação de prazer</span>
+              </div>
+            </div>
+          </div>
 
-    <section class="location section-pad" id="localizacao">
-      <div class="location-card">
-        <p class="eyebrow">Onde fica</p>
-        <h2>Bem Star Massagem em Vila Velha</h2>
-        <address>
-          Rua Antônio Ataíde, 1402<br>
-          Edifício Ludovinia, sala 107<br>
-          Centro de Vila Velha — ES<br>
-          CEP 29100-290
-        </address>
-        <p>Atendimento com hora marcada.</p>
-        <div class="location-actions">
-          <a class="btn primary" href="https://wa.me/5527992419696?text=Ol%C3%A1%2C%20Viviane.%20Quero%20agendar%20uma%20sess%C3%A3o%20na%20Bem%20Star%20Massagem." target="_blank" rel="noopener">Agendar agora</a>
-          <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&query=Rua%20Ant%C3%B4nio%20Ata%C3%ADde%201402%20Sala%20107%20Centro%20Vila%20Velha%20ES" target="_blank" rel="noopener">Abrir no mapa</a>
+          <div class="relaxante-info-row">
+            <div class="info-pill">
+              <strong>Duração</strong>
+              <span>50 a 80 minutos</span>
+            </div>
+            <div class="info-pill">
+              <strong>Indicado para</strong>
+              <span>Estresse, insônia, dores musculares</span>
+            </div>
+          </div>
+
+          <a class="btn primary"
+             href="https://wa.me/5527992419696?text=Ol%C3%A1%2C%20Viviane.%20Quero%20agendar%20uma%20massagem%20relaxante%20na%20Bem%20Star."
+             target="_blank" rel="noopener">
+            Agendar Massagem Relaxante
+          </a>
+        </div>
+
+        <div class="relaxante-visual">
+          <div class="relaxante-card">
+            <img src="assets/viviane-lobato.webp"
+                 alt="Ambiente de massagem Bem Star"
+                 width="540" height="620"
+                 loading="lazy">
+          </div>
+          <div class="relaxante-quote">
+            <p>"O relaxamento não é um luxo. É a manutenção do corpo e da mente."</p>
+            <cite>— Viviane Lobato</cite>
+          </div>
         </div>
       </div>
     </section>
+
+    <section class="tantrica section-pad" id="tantrica">
+      <div class="tantrica-inner">
+        <div class="tantrica-header">
+          <p class="eyebrow eyebrow-light">Com respeito, ética e limites claros</p>
+          <h2>Massagem Tântrica em Vila Velha</h2>
+          <p class="tantrica-lead">Uma prática corporal voltada à presença, respiração e reconexão com o próprio corpo — conduzida com cuidado profissional.</p>
+        </div>
+
+        <div class="tantrica-content">
+          <div class="tantrica-text">
+            <p>A massagem tântrica é uma das práticas mais mal compreendidas do universo da terapia corporal. Longe de qualquer conotação vulgar, ela é uma experiência profunda de <strong>presença, respiração consciente e reconexão com o próprio corpo</strong>.</p>
+            <p>Na Bem Star Massagem, o atendimento é conduzido por Viviane Lobato com <strong>acolhimento, ética e limites profissionais bem definidos</strong>. É uma experiência de cuidado corporal, realizada em ambiente seguro, tranquilo e respeitoso.</p>
+            <p>Para quem nunca viveu essa experiência: é uma prática que une técnicas de respiração, toque consciente e relaxamento profundo, permitindo que o corpo libere tensões que outras modalidades de massagem não alcançam.</p>
+          </div>
+
+          <div class="tantrica-pillars">
+            <div class="pillar">
+              <span class="pillar-icon">🕊️</span>
+              <strong>Respeito absoluto</strong>
+              <p>Limites claros e comunicação aberta durante toda a sessão</p>
+            </div>
+            <div class="pillar">
+              <span class="pillar-icon">🌬️</span>
+              <strong>Respiração consciente</strong>
+              <p>Técnicas que ampliam a percepção corporal e promovem relaxamento profundo</p>
+            </div>
+            <div class="pillar">
+              <span class="pillar-icon">✋</span>
+              <strong>Toque ético</strong>
+              <p>Conduzido com sensibilidade, presença e cuidado profissional</p>
+            </div>
+            <div class="pillar">
+              <span class="pillar-icon">🔒</span>
+              <strong>Ambiente seguro</strong>
+              <p>Espaço preparado para uma experiência tranquila e acolhedora</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tantrica-cta">
+          <p>Tem dúvidas sobre a sessão? Viviane responde com atenção e sem julgamentos.</p>
+          <a class="btn btn-white"
+             href="https://wa.me/5527992419696?text=Ol%C3%A1%2C%20Viviane.%20Tenho%20algumas%20d%C3%BCtadas%20sobre%20a%20massagem%20t%C3%A2ntrica%20na%20Bem%20Star."
+             target="_blank" rel="noopener">
+            Conversar sobre a sessão
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq section-pad" id="faq">
+      <div class="faq-inner">
+        <div class="faq-header">
+          <p class="eyebrow">Perguntas frequentes</p>
+          <h2>Tudo que você precisa saber antes de agendar.</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Como funciona o agendamento?</summary>
+            <div class="faq-answer">
+              <p>O agendamento é feito pelo WhatsApp ou pelo Instagram. Você entra em contato, verifica a disponibilidade de horários com Viviane e confirma a sessão. É simples, rápido e sem burocracia. Atendemos exclusivamente com hora marcada.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Quanto tempo dura cada sessão?</summary>
+            <div class="faq-answer">
+              <p>A duração varia de acordo com a modalidade. A massagem relaxante geralmente tem duração de 50 a 80 minutos. As sessões terapêuticas e especiais podem ter durações diferentes — consulte ao agendar.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>O que devo levar para a sessão?</summary>
+            <div class="faq-answer">
+              <p>Não é preciso levar nada especial. O espaço disponibiliza toalhas e todos os produtos necessários para a sessão. Apenas chegue no horário marcado e com disposição para relaxar.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>A massagem relaxante tem alguma contraindicação?</summary>
+            <div class="faq-answer">
+              <p>Em geral, a massagem relaxante é segura para a maioria das pessoas. No entanto, pessoas com algumas condições específicas (como febre, inflamações agudas, trombose ou problemas de pele na área a ser massageada) devem consultar um médico antes. Ao agendar, informe se tiver alguma condição de saúde relevante para que Viviane possa adaptar o atendimento.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>A massagem tântrica é adequada para mim?</summary>
+            <div class="faq-answer">
+              <p>A massagem tântrica é uma prática corporal séria, voltada à presença, respiração e reconexão com o próprio corpo. É conduzida com total respeito, ética e limites profissionais claros. Se você tem curiosidade, a melhor forma é conversar diretamente com Viviane pelo WhatsApp antes de agendar — ela responde suas dúvidas com atenção e sem julgamentos.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Vocês atendem casais?</summary>
+            <div class="faq-answer">
+              <p>Sim. Temos opções de atendimento para casais. Entre em contato pelo WhatsApp para verificar as modalidades disponíveis, horários e condições especiais.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Quais são os valores das sessões?</summary>
+            <div class="faq-answer">
+              <p>Os valores variam de acordo com a modalidade e a duração da sessão. Entre em contato pelo WhatsApp para consultar a tabela atualizada de preços — Viviane informa tudo com transparência.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Com que frequência devo fazer massagem?</summary>
+            <div class="faq-answer">
+              <p>Depende do seu objetivo. Para relaxamento e bem-estar geral, uma sessão por mês já traz resultados significativos. Para alívio de dores ou tensões crônicas, sessões quinzenais ou semanais podem ser mais indicadas. Viviane pode orientar a frequência ideal para o seu caso.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Como chegar ao espaço?</summary>
+            <div class="faq-answer">
+              <p>O espaço fica na <strong>Rua Antônio Ataíde, 1402, Edifício Ludovinia, sala 107, Centro de Vila Velha — ES</strong>. Há estacionamentos nas proximidades. Você também pode usar o transporte público ou aplicativos de mobilidade.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Posso pagar de qual forma?</summary>
+            <div class="faq-answer">
+              <p>Aceitamos Pix, dinheiro e cartão. Consulte as formas de pagamento ao agendar, pois as condições podem variar conforme a modalidade.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq-cta">
+          <p>Ainda tem dúvidas? Viviane responde pelo WhatsApp.</p>
+          <a class="btn primary"
+             href="https://wa.me/5527992419696?text=Ol%C3%A1%2C%20Viviane.%20Tenho%20uma%20d%C3%BAvida%20sobre%20os%20atendimentos%20da%20Bem%20Star%20Massagem."
+             target="_blank" rel="noopener">
+            Perguntar pelo WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contato section-pad" id="contato">
+      <div class="contato-inner">
+        <div class="contato-info">
+          <p class="eyebrow">Onde nos encontrar</p>
+          <h2>Bem Star Massagem em Vila Velha</h2>
+
+          <address>
+            <div class="address-line">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Rua Antônio Ataíde, 1402<br>Edifício Ludovinia, sala 107<br>Centro de Vila Velha &mdash; ES<br>CEP 29100-290</span>
+            </div>
+            <div class="address-line">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .99h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 15v1.92z"/></svg>
+              <a href="https://wa.me/5527992419696" target="_blank" rel="noopener">(27) 99241-9696</a>
+            </div>
+            <div class="address-line">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <a href="https://www.instagram.com/bemstar.massagem/" target="_blank" rel="noopener">@bemstar.massagem</a>
+            </div>
+          </address>
+
+          <p class="horario-note">
+            <strong>Atendimento exclusivamente com hora marcada.</strong><br>
+            Entre em contato para verificar disponibilidade.
+          </p>
+
+          <div class="contato-actions">
+            <a class="btn primary"
+               href="https://wa.me/5527992419696?text=Ol%C3%A1%2C%20Viviane.%20Quero%20agendar%20uma%20sess%C3%A3o%20na%20Bem%20Star%20Massagem."
+               target="_blank" rel="noopener">
+              Agendar agora
+            </a>
+            <a class="btn secondary"
+               href="https://www.google.com/maps/search/?api=1&query=Rua+Ant%C3%B4nio+Ata%C3%ADde+1402+Vila+Velha+ES"
+               target="_blank" rel="noopener">
+              Abrir no Google Maps
+            </a>
+          </div>
+        </div>
+
+        <div class="contato-map">
+          <iframe
+            title="Localização da Bem Star Massagem"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.8899!2d-40.2920!3d-20.3296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDE5JzQ2LjYiUyA0MMKwMTcnMzEuMiJX!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <img src="assets/logo-bem-star.webp" alt="Bem Star Massagem" width="72" height="72">
-    <p><strong>Bem Star Massagem</strong><br>Viviane Lobato • Vila Velha/ES</p>
-    <p><a href="https://wa.me/5527992419696" target="_blank" rel="noopener">(27) 99241-9696</a> · <a href="https://www.instagram.com/bemstar.massagem/" target="_blank" rel="noopener">Instagram</a></p>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo-roxa-transparente.png" alt="Bem Star Massagem" width="64" height="64">
+        <div>
+          <strong>Bem Star Massagem</strong>
+          <span>Viviane Lobato &bull; Vila Velha / ES</span>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Links do rodapé">
+        <a href="#sobre">Sobre</a>
+        <a href="#massagens">Massagens</a>
+        <a href="#relaxante">Relaxante</a>
+        <a href="#tantrica">Tântrica</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="footer-contact">
+        <a href="https://wa.me/5527992419696" target="_blank" rel="noopener">(27) 99241-9696</a>
+        <a href="https://www.instagram.com/bemstar.massagem/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/bemstarmassagem/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Bem Star Massagem &bull; Viviane Lobato &bull; Vila Velha / ES</p>
+    </div>
   </footer>
+
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('mainNav');
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', false);
+      });
+    });
+  </script>
+
 </body>
 </html>
