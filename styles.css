@@ -4,6 +4,7 @@
    Tipografia: Playfair Display + Inter
 ════════════════════════════════════════════════ */
 
+/* ── TOKENS ─────────────────────────────────────── */
 :root {
   --purple:        #5c3d6b;
   --purple-dark:   #3a2444;
@@ -27,8 +28,12 @@
   --transition:    .25s cubic-bezier(.4, 0, .2, 1);
 }
 
+/* ── RESET ───────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
 body {
   margin: 0;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
@@ -43,6 +48,7 @@ p { margin: 0 0 1rem; }
 p:last-child { margin-bottom: 0; }
 address { font-style: normal; }
 
+/* ── TIPOGRAFIA ──────────────────────────────────── */
 h1, h2, h3 {
   font-family: "Playfair Display", Georgia, serif;
   line-height: 1.08;
@@ -65,6 +71,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
 }
 .eyebrow-light { color: rgba(255,255,255,.65); }
 
+/* ── BOTÕES ──────────────────────────────────────── */
 .btn, .nav-cta {
   display: inline-flex;
   align-items: center;
@@ -108,7 +115,10 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
   border: 2px solid var(--purple);
   box-shadow: none;
 }
-.btn.outline:hover { background: var(--purple-xsoft); transform: translateY(-2px); }
+.btn.outline:hover {
+  background: var(--purple-xsoft);
+  transform: translateY(-2px);
+}
 .btn-white {
   display: inline-flex;
   align-items: center;
@@ -122,10 +132,15 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
   box-shadow: 0 8px 28px rgba(0,0,0,.12);
   transition: transform var(--transition), box-shadow var(--transition);
 }
-.btn-white:hover { transform: translateY(-2px); box-shadow: 0 16px 40px rgba(0,0,0,.18); }
+.btn-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.18);
+}
 
+/* ── LAYOUT HELPERS ─────────────────────────────── */
 .section-pad { padding: clamp(4rem, 9vw, 7.5rem) clamp(1.25rem, 5vw, 5rem); }
 
+/* ── TOPBAR / HEADER ─────────────────────────────── */
 .topbar {
   position: sticky;
   top: 0;
@@ -140,8 +155,11 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--line);
 }
-
-.brand { display: inline-flex; align-items: center; gap: .65rem; }
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+}
 .brand img { width: 44px; height: 44px; object-fit: contain; }
 .brand span {
   font-family: "Playfair Display", serif;
@@ -152,8 +170,11 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
   flex-direction: column;
 }
 .brand strong { color: var(--purple); font-size: 1.1rem; }
-
-.main-nav { display: flex; justify-content: center; gap: clamp(.6rem, 2vw, 1.8rem); }
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: clamp(.6rem, 2vw, 1.8rem);
+}
 .nav-link {
   font-size: .88rem;
   font-weight: 600;
@@ -165,7 +186,6 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
 }
 .nav-link:hover { color: var(--purple); border-bottom-color: var(--purple); }
 .nav-cta { font-size: .88rem; padding: .65rem 1.25rem; }
-
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -185,6 +205,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
   transition: transform var(--transition), opacity var(--transition);
 }
 
+/* ── HERO ────────────────────────────────────────── */
 .hero {
   display: grid;
   grid-template-columns: 1.1fr .9fr;
@@ -196,7 +217,12 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
 }
 .hero-copy { max-width: 580px; }
 .hero-copy h1 { margin-bottom: 1.2rem; }
-.lead { font-size: clamp(1.05rem, 1.8vw, 1.3rem); line-height: 1.65; color: var(--muted); max-width: 44rem; }
+.lead {
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  line-height: 1.65;
+  color: var(--muted);
+  max-width: 44rem;
+}
 .hero-actions { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 2rem; }
 .trust-row { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2rem; }
 .trust-row span {
@@ -208,7 +234,6 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
   background: rgba(255,255,255,.6);
   color: var(--purple-dark);
 }
-
 .hero-visual { position: relative; }
 .profile-frame {
   position: relative;
@@ -255,6 +280,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
 .hero-card-note strong { display: block; color: var(--purple-dark); font-size: .95rem; margin-bottom: .2rem; }
 .hero-card-note span { font-size: .85rem; line-height: 1.5; }
 
+/* ── SOBRE ───────────────────────────────────────── */
 .about {
   display: grid;
   grid-template-columns: .85fr 1.1fr;
@@ -277,7 +303,13 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
   text-align: center;
   box-shadow: var(--shadow-md);
 }
-.tag-number { display: block; font-family: "Playfair Display", serif; font-size: 2.5rem; font-weight: 700; line-height: 1; }
+.tag-number {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
 .about-tag span:not(.tag-number) { font-size: .8rem; font-weight: 600; opacity: .85; }
 .about-copy { max-width: 540px; }
 .about-copy h2 { margin-bottom: 1rem; }
@@ -286,6 +318,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
 .cert-item { display: flex; align-items: center; gap: .6rem; font-weight: 600; font-size: .9rem; color: var(--purple-dark); }
 .cert-item svg { color: var(--purple); flex-shrink: 0; }
 
+/* ── MASSAGENS / SERVIÇOS ────────────────────────── */
 .services { background: var(--paper); border-block: 1px solid var(--line); }
 .section-intro {
   display: grid;
@@ -297,7 +330,6 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
 }
 .section-intro h2 { margin-bottom: 0; }
 .section-desc { color: var(--muted); font-size: 1.1rem; line-height: 1.65; margin: 0; }
-
 .service-grid {
   max-width: 1300px;
   margin: 0 auto;
@@ -320,6 +352,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
 .card-link:hover { border-bottom-color: var(--purple); }
 .highlight-card { background: linear-gradient(135deg, var(--purple-xsoft), var(--purple-soft)); border-color: var(--purple-soft); }
 
+/* ── RELAXANTE ───────────────────────────────────── */
 .relaxante { background: linear-gradient(180deg, var(--cream) 0%, var(--purple-xsoft) 100%); }
 .relaxante-inner {
   display: grid;
@@ -334,13 +367,10 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
 .relaxante-benefits { display: grid; gap: 1.2rem; margin-bottom: 2rem; }
 .benefit-item { display: flex; align-items: flex-start; gap: 1rem; }
 .benefit-icon {
-  width: 44px;
-  height: 44px;
+  width: 44px; height: 44px;
   background: var(--purple-soft);
   border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
   color: var(--purple);
 }
@@ -352,9 +382,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
   background: #fff;
   border: 1.5px solid var(--line);
   border-radius: var(--radius-sm);
-  display: flex;
-  flex-direction: column;
-  gap: .25rem;
+  display: flex; flex-direction: column; gap: .25rem;
 }
 .info-pill strong { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; color: var(--purple); }
 .info-pill span { font-size: .9rem; color: var(--muted); }
@@ -372,6 +400,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
 .relaxante-quote p { font-family: "Playfair Display", serif; font-style: italic; font-size: 1.05rem; color: var(--purple-dark); margin-bottom: .4rem; }
 .relaxante-quote cite { font-size: .82rem; color: var(--muted); font-style: normal; }
 
+/* ── TÂNTRICA ─────────────────────────────────────── */
 .tantrica {
   background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple) 50%, #8a5e9e 100%);
   color: #fff;
@@ -411,6 +440,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
 .tantrica-cta { text-align: center; }
 .tantrica-cta p { color: rgba(255,255,255,.75); font-size: 1rem; margin-bottom: 1.2rem; }
 
+/* ── FAQ ──────────────────────────────────────────── */
 .faq { background: var(--paper); }
 .faq-inner { max-width: 860px; margin: 0 auto; }
 .faq-header { margin-bottom: 2.5rem; }
@@ -455,6 +485,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
 .faq-cta { text-align: center; margin-top: 2.5rem; padding-top: 2.5rem; border-top: 1px solid var(--line); }
 .faq-cta p { color: var(--muted); margin-bottom: 1rem; }
 
+/* ── CONTATO ─────────────────────────────────────── */
 .contato-inner {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -489,6 +520,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
 }
 .contato-map iframe { width: 100%; height: 100%; border: none; }
 
+/* ── FOOTER ──────────────────────────────────────── */
 .footer {
   background: var(--purple-dark);
   color: rgba(255,255,255,.75);
@@ -514,8 +546,25 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
 .footer-contact { display: flex; flex-direction: column; gap: .5rem; text-align: right; }
 .footer-contact a { font-size: .88rem; font-weight: 600; color: rgba(255,255,255,.75); transition: color var(--transition); }
 .footer-contact a:hover { color: #fff; }
-.footer-bottom { max-width: 1300px; margin: 1.2rem auto 0; text-align: center; font-size: .78rem; color: rgba(255,255,255,.35); }
+.footer-bottom {
+  max-width: 1300px;
+  margin: 1.2rem auto 0;
+  text-align: center;
+  font-size: .78rem;
+  color: rgba(255,255,255,.35);
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+}
+.footer-bottom a {
+  color: rgba(255,255,255,.55);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition);
+}
+.footer-bottom a:hover { color: #fff; }
 
+/* ── RESPONSIVO ──────────────────────────────────── */
 @media (max-width: 1100px) {
   .service-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -526,8 +575,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
-    right: 0;
+    left: 0; right: 0;
     background: rgba(253, 249, 244, .98);
     backdrop-filter: blur(20px);
     flex-direction: column;
@@ -570,6 +618,7 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
   .nav-cta { display: none; }
 }
 
+/* ── ACESSIBILIDADE ──────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     scroll-behavior: auto !important;
@@ -577,7 +626,6 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 500; }
     animation: none !important;
   }
 }
-
 :focus-visible {
   outline: 2.5px solid var(--purple);
   outline-offset: 3px;
