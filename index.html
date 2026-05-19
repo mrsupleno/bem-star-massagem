@@ -106,28 +106,11 @@
 
       <div class="hero-visual">
         <div class="profile-frame">
-          <div class="hero-carousel" id="heroCarousel" aria-label="Fotos de Viviane Lobato">
-            <img class="carousel-slide active"
-                 src="assets/viviane-lobato-massagista.webp"
-                 alt="Viviane Lobato realizando massagem terapêutica"
-                 width="680" height="850"
-                 loading="eager">
-            <img class="carousel-slide"
-                 src="assets/viviane-lobato-cadeira.webp"
-                 alt="Viviane Lobato massoterapeuta"
-                 width="680" height="860"
-                 loading="lazy">
-            <img class="carousel-slide"
-                 src="assets/viviane-lobato-poltrona.webp"
-                 alt="Viviane Lobato na Bem Star Massagem"
-                 width="680" height="850"
-                 loading="lazy">
-            <div class="carousel-dots" role="tablist" aria-label="Navegação de fotos">
-              <button class="dot active" role="tab" aria-selected="true"  aria-label="Foto 1" data-idx="0"></button>
-              <button class="dot"        role="tab" aria-selected="false" aria-label="Foto 2" data-idx="1"></button>
-              <button class="dot"        role="tab" aria-selected="false" aria-label="Foto 3" data-idx="2"></button>
-            </div>
-          </div>
+          <img class="profile-photo"
+               src="assets/viviane-lobato-massagista.webp"
+               alt="Viviane Lobato realizando massagem terapêutica"
+               width="680" height="850"
+               loading="eager">
           <div class="profile-badge">
             <img src="assets/logo-roxa-transparente.png" alt="Bem Star Massagem" width="72" height="72">
           </div>
@@ -148,7 +131,7 @@
     <section class="about section-pad" id="sobre">
       <div class="about-visual">
         <div class="about-img-wrap">
-          <img src="assets/viviane-lobato.webp"
+          <img src="assets/viviane-lobato-cadeira.webp"
                alt="Viviane Lobato massoterapeuta"
                width="600" height="700"
                loading="lazy">
@@ -316,8 +299,8 @@
 
         <div class="relaxante-visual">
           <div class="relaxante-card">
-            <img src="assets/viviane-lobato.webp"
-                 alt="Ambiente de massagem Bem Star"
+            <img src="assets/viviane-lobato-poltrona.webp"
+                 alt="Viviane Lobato na Bem Star Massagem"
                  width="540" height="620"
                  loading="lazy">
           </div>
@@ -569,39 +552,6 @@
       <p>Site desenvolvido pela <a href="https://sucesso.net.br/" target="_blank" rel="noopener">Agência do Sucesso Empresarial</a></p>
     </div>
   </footer>
-
-  <!-- Hero carousel -->
-  <script>
-    (function () {
-      var c = document.getElementById('heroCarousel');
-      if (!c) return;
-      var slides  = c.querySelectorAll('.carousel-slide');
-      var dots    = c.querySelectorAll('.dot');
-      var current = 0;
-      var timer;
-
-      function goTo(idx) {
-        slides[current].classList.remove('active');
-        dots[current].classList.remove('active');
-        dots[current].setAttribute('aria-selected', 'false');
-        current = idx;
-        slides[current].classList.add('active');
-        dots[current].classList.add('active');
-        dots[current].setAttribute('aria-selected', 'true');
-      }
-
-      function next() { goTo((current + 1) % slides.length); }
-
-      function start() { timer = setInterval(next, 4500); }
-      function stop()  { clearInterval(timer); }
-
-      dots.forEach(function (dot, i) {
-        dot.addEventListener('click', function () { stop(); goTo(i); start(); });
-      });
-
-      start();
-    })();
-  </script>
 
   <!-- Menu mobile toggle -->
   <script>
